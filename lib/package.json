@@ -1,0 +1,54 @@
+{
+  "name": "create-fresh-cli",
+  "version": "0.0.5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wojiangkuanglong/create-fresh-cli",
+    "directory": "lib"
+  },
+  "description": "create fresh cli",
+  "license": "MIT",
+  "author": "chengzhenghao@kuaishou.com",
+  "exports": {
+    ".": "./cli.mjs"
+  },
+  "bin": {
+    "create-fresh-cli": "./cli.mjs"
+  },
+  "files": [
+    "dist",
+    "cli.mjs"
+  ],
+  "scripts": {
+    "build": "tsup src -- --dts-resolve",
+    "build:fast": "tsup src",
+    "dev": "tsup src --watch",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "coverage": "vitest run --coverage",
+    "ci:version": "changeset version",
+    "ci:publish": "changeset publish"
+  },
+  "keywords": [
+    "cli",
+    "react-template",
+    "vue-template",
+    "node-template",
+    "npm-template",
+    "vite",
+    "vitest"
+  ],
+  "devDependencies": {
+    "@clack/prompts": "^0.7.0",
+    "@tsconfig/node16": "^1.0.3",
+    "@types/yargs-parser": "^21.0.0",
+    "@vitest/coverage-c8": "^0.24.5",
+    "cli-testing-library": "^2.0.1"
+  },
+  "dependencies": {
+    "kleur": "^4.1.5",
+    "node-fetch": "^3.3.0",
+    "simple-git": "^3.21.0",
+    "yargs-parser": "^21.1.1"
+  }
+}

@@ -43,32 +43,3 @@ pnpm create fresh@latest -- --name my-project --kit react --flavor application -
 | `--git`    | 是否初始化 git 仓库                | `true`      |
 | `--vscode` | 是否包含 .vscode 文件              | `true`      |
 | `--pm`     | 包管理器 npm、yarn、pnpm           | `npm`       |
-
-### 如何开发
-
-```bash
-pnpm install
-pnpm run dev
-```
-
-该命令将在观察模式下运行 cli，因此您可以进行更改并在 cli 中看到这些更改
-
-```bash
-node ./lib/cli.mjs
-```
-
-### 相关技术
-
-- [PNPM](https://pnpm.io/workspaces)
-- [Turborepo](https://turbo.build/repo)
-- [TSUP](https://tsup.egoist.dev/)
-- [Simple Git](https://github.com/steveukx/git-js)
-- [Vitest](https://vitest.dev/)
-- [Size Limit](https://github.com/ai/size-limit)
-- [Prettier](https://prettier.io/)
-- [ESLint](https://eslint.org/)
-
-### 目录结构
-
-- [docs](./docs/) - 文档
-- [lib](./lib/) - cli 源码
